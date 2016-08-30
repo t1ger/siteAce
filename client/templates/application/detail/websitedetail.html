@@ -1,0 +1,19 @@
+<template name="websitedetail">
+<div class="container">
+
+<h1>{{title}}</h1>
+<h2>{{description}}</h2>
+<h5>Created by: {{getUser createdBy}} On <span class="item-created-on">{{formatDate createdOn}}</span></h5>
+
+<hr>
+{{#if currentUser}}
+    {{> comment_form}}
+    {{/if}}
+
+    {{> comment_item}}
+
+
+</div>
+
+
+</template>
